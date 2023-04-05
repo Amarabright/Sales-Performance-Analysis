@@ -1,26 +1,26 @@
 # Sales-Performance-Analysis
-This is a project that shows my ability to query data from Adventure Works database Using SQL, thereafter using PowerBI to import, analyze and visualise
+This is a project that shows my ability to query data from Adventure Works DW database Using SQL, thereafter using PowerBI to import, analyze and visualise
 *(The  picture below is gotten from freepiks website)*
 
 ![](Salesman.jpg)
 
 ## Introduction
 
-This is an analysis of the Sales performance of AdventureWorks. It is done by analyzing data from different schemas on the AdventureWorks database. I anlyzed data from dim_customers table, dim_date table, dim_product table, dim_territory sales and fact_internet sales table. I used SQL to query the data from the database and imported into PowerBI where the actual analysis was carried out. 
+This is an analysis of the Sales performance of AdventureWorksDW. It is done by analyzing data from different schemas on the AdventureWorks DWdatabase. I anlyzed data from dim_customers table, dim_date table, dim_product table, dim_territory sales and fact_internet sales table. I used SQL to query the data from the database and imported into PowerBI where the actual analysis was carried out. 
 
-**_Disclaimer_** This is not a real company as we know that adventure works database is compiled by Microsoft for learning purposes.
+**_Disclaimer_** This is not a real company as we know that adventure works DW database is compiled by Microsoft for learning purposes.
 
 ## Problem Statement
 
 The goal of this analysis is to
-- identify the areas where sales performance is lacking or could be improved,
-- determine the underlying factors that are contributing to low sales
-- The goal is to collect data on the sales team's performance, processes, and strategies in order to improve their approach and promote revenue growth.
+- Determine the current market demand for products and how it varies by region/location
+- Know the current sales performance and how it compares to past performance and industry benchamarks
+- identify the areas where sales performance is lacking or could be improved.
 - To discover target markets or goods that have the greatest impact on sales success.
 - Finally, the goal is to create data-driven plans that can aid in increasing sales, improving customer happiness, and driving corporate growth.
 
 
-## ## Skills and Concepts demonstrated:
+## Skills and Concepts demonstrated:
  
  - SQL (Select, alias, Views)
  - PowerBI concepts like:
@@ -46,3 +46,113 @@ The data used for this work is gotten from the AdventureWorks 2019 database 2019
  
 ## Data Transformation:
 - Several structured queries were written to get the right tables and then saved as views in the Database on SQL Management studio.
+The tables and views are:
+- Customers Table
+
+![](CustomersView.png)
+
+- Date Table
+![](DateView.png)
+
+
+- Product Table
+![](ProductView.png)
+
+- Territory and Sales Table
+![](TerritoryandSalesView.png)
+
+Note that i found a script that updated the dates. Part of it is shown here:
+
+![](UpdateDate.png)
+
+
+- These tables were then imported into PowerBI desktop for analysis. 
+![](SQLtoPowerBI.png)
+
+
+- I chose the necessary tables
+![](NecessaryTables.png)
+
+
+I tranformed the data in Power Query, checked for Colum quality, consistent or appropriate data types.
+
+I began writing several Dax and creating measures and calculated columns to get the right metrics for the Sales Performance analysis.
+
+I also created Measures in a table named "Key Measures".
+
+The queries i wrote on SQL are on compiled and also uploaded here in this repository as [SalesPerformanceScript.sql](https://github.com/Amarabright/Sales-Performance-Analysis/blob/main/SalesPerformanceScript.sql)
+
+---
+## Data Modelling:
+
+Tables were automatically joined by creating relationships with them, PowerBI does this intelligently. However, as someone that understands the dataset and want to get specific insights and information. I had to create other relationships and measures to enable me. so I did another model. I created a Star Schema that has 1 fact table and 5 dimension tables.
+
+Recreated Model                     |  Automated Model
+:--------------------------:        |    :-----------------------------------:
+![](RecreatedModel.png)             |   ![](AutomatedModel.png)
+
+
+## Data Analysis and Visualization
+
+Several expressions and functions were made to arrive at the desired KPI or Metrics.  
+I arrived at a report with three (3) pages named:
+- Sales Page
+- Product Page and then 
+- Insight Page
+
+For some reasons i cant explain, i guess administrative reasons on the PowerBI service, the key Influencers Visual i used wasnt visible or maybe allow for use from my admin settings. I cried to find a waym but could not. If i find a way, i will drop the link so you can interact with the report.
+
+## Features of the Report
+
+The first page is named Sales Page and it contains information regarding sales. The page has a Page Navigation button at the top, just by the right of the title of the report, so it helps with navigation to the other pages. The button is also on the second page, but the third page has a back button" that returns  to the Sales or Product Page.
+
+- Sales Page
+![](SalesPage.png)
+
+- Product Page
+![](ProductPage.png)
+
+- InsightPage
+![](InsightPage.png)
+
+---
+## Analysis
+
+ - There is a positive trend of sales going upwards and increasing especially in the quarters of 2022.
+ 
+ - North America is the locatiob(group) that has the highest sales which is 38.7%, followed by Pacific at 30.84%.
+ 
+ - "Bikes" account for majority of the sales and profit of  $11.5 Million which is 95.4%. Accessory as a subcategory is the product with the greatest number of orders but lower revenue, this is due to price gap between both and for the fact that several accessories can be used to fix a damaged bike.
+
+- USA has the highest sales and order. Sales is $9.37milllion which is approximately 32% of total sales and 35% of total order. This is followed by Australia which has a sales value of $9.04 million.
+
+ - In 2020, total sales was slightly higher than the target (>by 300,000). In 2021, Total Sales was slightly lower than the total target(<by 200,000). In 2022, there was  much difference as Total sales was $4,000,000 higher than the Target. This is a success!
+
+ - Total Sales increases when the Category is Bike and also when the order quantity is much. Total Sales decreases when Category is Clothing or Accessories.
+
+  - Jordan Turner is the customer with highest purchasing value of $15,999 followed by Willie Xu of  $13,490 although Ashley Henderson had the highest order quantity.
+
+ - Black Mountain Bikes have the highest order and sales followed by the Road Bikes.
+
+---
+
+## Recommendation
+
+There are no doubts that the Business is performing well as the major product it is known for, is been sold (Bikes), However, there is room for more improvements.
+
+
+ - The accessories and clothing subcategories are not doing much in sales. Strategies to increase the sales should be made like "discounted bundle-selling" where for any purchase of bike, accessories and clothing will be added as an offer in addition to the bikes but at a  discounted price which will be cheaper compared to when they are buying the accessories or clothing as a stand-alone product.
+
+ - Use database to gather customer feedback to get their experiences about the product or services. This information can be used to identify areas for improvement.
+
+ - Partner with local organization to promote bike riding in the community. This would help increase awareness of bike products and generate positive word of mouth marketing.
+
+ - Understand Customers purchasing pattern by carrying out an analysis on this. This will tell what customers are buying, when they are buying  and how to promote the goods to the customers.
+
+---
+
+### Thank you for reading.
+
+I am open for entry-level data anlalyst role.
+
+Let us have discussion about your company and industry now!
