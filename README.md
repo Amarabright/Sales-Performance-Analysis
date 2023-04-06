@@ -14,7 +14,7 @@ This is an analysis of the Sales performance of AdventureWorksDW. It is done by 
 
 The goal of this analysis is to
 - Determine the current market demand for products and how it varies by region/location
-- Know the current sales performance and how it compares to past performance and industry benchamarks
+- Know the current sales performance and how it compares to past performance and industry benchmarks
 - identify the areas where sales performance is lacking or could be improved.
 - To discover target markets or goods that have the greatest impact on sales success.
 - Finally, the goal is to create data-driven plans that can aid in increasing sales, improving customer happiness, and driving corporate growth.
@@ -80,7 +80,7 @@ I began writing several Dax and creating measures and calculated columns to get 
 
 I also created Measures in a table named "Key Measures".
 
-The queries i wrote on SQL are on compiled and also uploaded here in this repository as [SalesPerformanceScript.sql](https://github.com/Amarabright/Sales-Performance-Analysis/blob/main/SalesPerformanceScript.sql)
+The queries i wrote on SQL are compiled and also uploaded here in this repository as [SalesPerformanceScript.sql](https://github.com/Amarabright/Sales-Performance-Analysis/blob/main/SalesPerformanceScript.sql)
 
 ---
 ## Data Modelling:
@@ -100,7 +100,7 @@ I arrived at a report with three (3) pages named:
 - Product Page and then 
 - Insight Page
 
-For some reasons i cant explain, i guess administrative reasons on the PowerBI service, the key Influencers Visual i used wasnt visible or maybe allow for use from my admin settings. I cried to find a waym but could not. If i find a way, i will drop the link so you can interact with the report.
+For some reasons that i don't understand maybe administrative reasons on the PowerBI service, the key Influencers Visual i used wasn't visible or maybe allow for use from my admin settings. I tried to find a way but could not. If i find a way, i will drop the link so you can interact with the report.
 
 ## Features of the Report
 
@@ -120,7 +120,7 @@ The first page is named Sales Page and it contains information regarding sales. 
 
  - There is a positive trend of sales going upwards and increasing especially in the quarters of 2022.
  
- - North America is the locatiob(group) that has the highest sales which is 38.7%, followed by Pacific at 30.84%.
+ - North America is the location(group) that has the highest sales which is 38.7%, followed by Pacific at 30.84%.
  
  - "Bikes" account for majority of the sales and profit of  $11.5 Million which is 95.4%. Accessory as a subcategory is the product with the greatest number of orders but lower revenue, this is due to price gap between both and for the fact that several accessories can be used to fix a damaged bike.
 
