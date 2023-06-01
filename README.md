@@ -115,6 +115,7 @@ The first page is named Sales Page and it contains information regarding sales. 
 - InsightPage
 ![](InsightPage.png)
 
+### You can interact with the report [here.](https://app.powerbi.com/view?r=eyJrIjoiZTZjY2RiNTMtYTViYS00ZDUzLTkzOWUtMWEyOTg2MDgxNDUwIiwidCI6IjY0NTI5N2QxLWVkNmMtNDk0Ni1iNzg1LTE1MTI5MThlYmU2YiJ9)
 ---
 ## Analysis
 
